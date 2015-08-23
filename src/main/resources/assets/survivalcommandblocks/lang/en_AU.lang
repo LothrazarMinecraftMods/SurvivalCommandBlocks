@@ -1,0 +1,7 @@
+itemGroup.tabSurvCommand=Survival Command Blocks
+tile.command_block_weather.name=Weather Command Block
+tile.command_block_regen.name=Natural Regen Command Block
+tile.command_block_firetick.name=Do Fire Tick Command Block
+tile.command_block_mobgrief.name=Mob Griefing Command Block
+tile.command_block_daycycle.name=Daylight Cycle Command Block
+tile.command_block_sky.name=Sky Command Block
