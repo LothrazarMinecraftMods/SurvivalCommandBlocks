@@ -1,10 +1,12 @@
 package com.lothrazar.survivalcommandblocks;
 
 import org.apache.logging.log4j.Logger;  
+
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.config.Configuration;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -32,14 +34,14 @@ public class ModSurvCommand
 	public final static String MODID = "survivalcommandblocks";
 	 public static String TEXTURE_LOCATION = MODID+":";
 
-	//public static ConfigFile settings;
+	public static ConfigSettings settings;
 	
 	@EventHandler
 	public void onPreInit(FMLPreInitializationEvent event)
 	{ 
 		logger = event.getModLog();
 		 
-		//settings = new ConfigFile(new Configuration(event.getSuggestedConfigurationFile()));
+		settings = new ConfigSettings(new Configuration(event.getSuggestedConfigurationFile()));
  
 		MinecraftForge.EVENT_BUS.register(instance);
 		FMLCommonHandler.instance().bus().register(instance);
