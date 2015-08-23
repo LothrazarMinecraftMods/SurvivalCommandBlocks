@@ -41,7 +41,7 @@ public class ModSamsContent
 	@EventHandler
 	public void onInit(FMLInitializationEvent event)
 	{     
-		BlockCommandBlockCraftable.init();  
+		BlockRegistry.init();  
 	}
 
 	 public static void registerBlockHelper(Block s, String name)

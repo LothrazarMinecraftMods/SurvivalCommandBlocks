@@ -1,0 +1,60 @@
+package com.lothrazar.survivalcommandblocks;
+
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+
+import com.lothrazar.survivalcommandblocks.BlockCommandBlockCraftable.CommandType;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+
+public class BlockRegistry 
+{
+
+	static BlockCommandBlockCraftable command_block_regen;
+	static BlockCommandBlockCraftable command_block_firetick;
+	static BlockCommandBlockCraftable command_block_daycycle;
+	//static BlockCommandBlockCraftable command_block_mobgrief;
+	static BlockCommandBlockCraftable command_block_weather;
+	static BlockCommandBlockCraftable command_block_sky; 
+	
+	public static void init()
+	{ 
+		command_block_regen = new BlockCommandBlockCraftable( CommandType.Gamerule, "naturalRegeneration");
+		ModSamsContent.registerBlockHelper(command_block_regen,"command_block_regen");
+		addRecipe(command_block_regen,new ItemStack(Items.golden_apple)); 
+  
+		//command_block_mobgrief = new BlockCommandBlockCraftable(CommandType.Gamerule, "mobGriefing");
+		//ModSamsContent.registerBlockHelper(command_block_mobgrief,"command_block_mobgrief");
+		//addRecipe(command_block_mobgrief,new ItemStack(Blocks.tnt)); 
+
+		command_block_firetick = new BlockCommandBlockCraftable(CommandType.Gamerule, "doFireTick"); 
+		ModSamsContent.registerBlockHelper(command_block_firetick,"command_block_firetick");
+		addRecipe(command_block_firetick,new ItemStack( Items.lava_bucket)); 
+ 
+		command_block_daycycle = new BlockCommandBlockCraftable(CommandType.Gamerule,"doDaylightCycle");
+		ModSamsContent.registerBlockHelper(command_block_daycycle,"command_block_daycycle");
+		addRecipe(command_block_daycycle,new ItemStack(Blocks.glowstone)); 
+  
+		command_block_weather = new BlockCommandBlockCraftable(CommandType.Weather); 
+		ModSamsContent.registerBlockHelper(command_block_weather,"command_block_weather"); 
+		addRecipe(command_block_weather,new ItemStack(Items.water_bucket)); 
+		
+		command_block_sky = new BlockCommandBlockCraftable(CommandType.Teleport,64); 
+		ModSamsContent.registerBlockHelper(command_block_sky,"command_block_sky"); 
+		addRecipe(command_block_sky,new ItemStack(Items.ender_eye)); 
+	}
+	
+	private static void addRecipe(BlockCommandBlockCraftable output, ItemStack center)
+	{ 
+		GameRegistry.addRecipe(new ItemStack(output), 
+				"rcr", 
+				"tet",
+				"rcr", 
+				'c', Items.comparator, 
+				'e', center, 
+				'r', Blocks.redstone_block, 
+				't', Items.ghast_tear);
+	}
+
+}
