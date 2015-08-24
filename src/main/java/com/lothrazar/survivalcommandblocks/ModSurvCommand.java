@@ -7,13 +7,13 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
-import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.Mod.Instance;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
  
 @Mod(modid = ModSurvCommand.MODID, useMetadata = true) 
 public class ModSurvCommand
@@ -55,13 +55,13 @@ public class ModSurvCommand
 
 	 public static void registerBlockHelper(Block s, String name)
 	 {
-		 s.setBlockName(name).setBlockTextureName(TEXTURE_LOCATION + name);
+		 s.setUnlocalizedName(name);//.setBlockTextureName(TEXTURE_LOCATION + name)
 		 GameRegistry.registerBlock(s, name);
 		 
 	 }
 	 public static void registerItemHelper(Item s, String name)
 	 {
-		 s.setUnlocalizedName(name).setTextureName(TEXTURE_LOCATION + name);
+		 s.setUnlocalizedName(name);//.setTextureName(TEXTURE_LOCATION + name)
 		 GameRegistry.registerItem(s, name);
 	 }
 	 
