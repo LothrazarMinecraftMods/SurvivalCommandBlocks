@@ -1,10 +1,7 @@
 package com.lothrazar.survivalcommandblocks;
 
-import java.util.ArrayList;
-
 import org.apache.logging.log4j.Logger;  
 
-import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
@@ -16,7 +13,6 @@ import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
  
 @Mod(modid = ModSurvCommand.MODID, useMetadata = true) 
 public class ModSurvCommand
