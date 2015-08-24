@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "normal": { "model": "survivalcommandblocks:command_block_daycycle" },
+        "triggered=true": { "model": "survivalcommandblocks:command_block_daycycle" },
+        "triggered=false": { "model": "survivalcommandblocks:command_block_daycycle" } 
+    }
+}

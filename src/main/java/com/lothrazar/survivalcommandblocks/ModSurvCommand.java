@@ -1,5 +1,7 @@
 package com.lothrazar.survivalcommandblocks;
 
+import java.util.ArrayList;
+
 import org.apache.logging.log4j.Logger;  
 
 import net.minecraft.block.Block;
@@ -11,6 +13,7 @@ import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -27,12 +30,12 @@ public class ModSurvCommand
 	};
 	//forked from my old repo: 
 	//https://github.com/PrinceOfAmber/SamsPowerups/commit/00a32f4a16739c307cf3c6149d2417dfff7ea3f3
-	
-	@Instance(value = ModSurvCommand.MODID)
+	@SidedProxy(clientSide="com.lothrazar.survivalcommandblocks.ClientProxy", serverSide="com.lothrazar.survivalcommandblocks.CommonProxy")
+	public static CommonProxy proxy;  @Instance(value = ModSurvCommand.MODID)
 	public static ModSurvCommand instance;
 	public static Logger logger;
 	public final static String MODID = "survivalcommandblocks";
-	 public static String TEXTURE_LOCATION = MODID+":";
+	public static String TEXTURE_LOCATION = MODID+":";
 
 	public static ConfigSettings settings;
 	
@@ -51,18 +54,8 @@ public class ModSurvCommand
 	public void onInit(FMLInitializationEvent event)
 	{     
 		BlockRegistry.init();  
+		
+		proxy.registerRenderers();
 	}
-
-	 public static void registerBlockHelper(Block s, String name)
-	 {
-		 s.setUnlocalizedName(name);//.setBlockTextureName(TEXTURE_LOCATION + name)
-		 GameRegistry.registerBlock(s, name);
-		 
-	 }
-	 public static void registerItemHelper(Item s, String name)
-	 {
-		 s.setUnlocalizedName(name);//.setTextureName(TEXTURE_LOCATION + name)
-		 GameRegistry.registerItem(s, name);
-	 }
-	 
+ 
 }
