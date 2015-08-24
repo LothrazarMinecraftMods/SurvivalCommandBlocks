@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "survivalcommandblocks:blocks/command_block_mobgrief",
+        "triggered=true": "survivalcommandblocks:blocks/command_block_mobgrief",
+        "triggered=false": "survivalcommandblocks:blocks/command_block_mobgrief"
+    }
+}

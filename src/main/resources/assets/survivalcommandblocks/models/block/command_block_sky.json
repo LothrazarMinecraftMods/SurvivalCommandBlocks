@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "survivalcommandblocks:blocks/command_block_sky",
+        "triggered=true": "survivalcommandblocks:blocks/command_block_sky",
+        "triggered=false": "survivalcommandblocks:blocks/command_block_sky"
+    }
+}

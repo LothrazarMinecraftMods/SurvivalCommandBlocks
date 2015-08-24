@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "normal": { "model": "survivalcommandblocks:command_block_sky" },
+        "triggered=true": { "model": "survivalcommandblocks:command_block_sky" },
+        "triggered=false": { "model": "survivalcommandblocks:command_block_sky" } 
+    }
+}

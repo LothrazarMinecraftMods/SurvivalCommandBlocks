@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "normal": { "model": "survivalcommandblocks:command_block_weather" },
+        "triggered=true": { "model": "survivalcommandblocks:command_block_weather" },
+        "triggered=false": { "model": "survivalcommandblocks:command_block_weather" } 
+    }
+}

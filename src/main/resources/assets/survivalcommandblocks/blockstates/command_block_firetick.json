@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "normal": { "model": "survivalcommandblocks:command_block_firetick" },
+        "triggered=true": { "model": "survivalcommandblocks:command_block_firetick" },
+        "triggered=false": { "model": "survivalcommandblocks:command_block_firetick" } 
+    }
+}

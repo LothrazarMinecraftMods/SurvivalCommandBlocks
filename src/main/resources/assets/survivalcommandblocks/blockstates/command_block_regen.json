@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "normal": { "model": "survivalcommandblocks:command_block_regen" },
+        "triggered=true": { "model": "survivalcommandblocks:command_block_regen" },
+        "triggered=false": { "model": "survivalcommandblocks:command_block_regen" } 
+    }
+}

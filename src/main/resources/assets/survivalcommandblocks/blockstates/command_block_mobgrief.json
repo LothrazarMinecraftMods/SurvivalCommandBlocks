@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "normal": { "model": "survivalcommandblocks:command_block_mobgrief" },
+        "triggered=true": { "model": "survivalcommandblocks:command_block_mobgrief" },
+        "triggered=false": { "model": "survivalcommandblocks:command_block_mobgrief" } 
+    }
+}
